@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>EMBER - Modern Nepali Kitchen</title>
+
+    <meta
+      name="description"
+      content="EMBER is a modern Nepali kitchen in Kathmandu, putting a contemporary spin on bold Himalayan flavors."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="noise"></div>
+
+    <nav class="nav">
+      <a href="#home" class="logo">
+        EMBER
+        <span>KT M</span>
+      </a>
+
+      <div class="desktop-nav">
+        <a href="#menu">MENU</a>
+
+        <a href="#story">OUR STORY</a>
+
+        <a href="#contact">CONTACT</a>
+      </div>
+
+      <button class="nav-booking" id="navBooking">
+        BOOK A TABLE
+
+        <span>↗</span>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <a href="#home">HOME</a>
+
+        <a href="#menu">MENU</a>
+
+        <a href="#story">STORY</a>
+
+        <a href="#contact">CONTACT</a>
+
+        <button class="mobile-booking" id="mobileBooking">BOOK</button>
+      </div>
+    </div>
+
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow hero-anim">KATHMANDU · NEPAL</p>
+
+        <h1 class="hero-title">
+          <span class="hero-line hero-anim"> TASTE </span>
+
+          <span class="hero-line hero-anim pink"> THE </span>
+
+          <span class="hero-line hero-anim"> HIMALAYAS </span>
+        </h1>
+
+        <p class="hero-intro hero-anim">
+          Contemporary Nepali cooking, built on open-fire flavors and
+          ingredients gathered from across the country.
+        </p>
+
+        <button class="button hero-anim" data-booking>
+          RESERVE YOUR TABLE
+
+          <span>↗</span>
+        </button>
+      </div>
+
+      <div class="hero-photo photo-a">
+        <img
+          src="https://i.pinimg.com/1200x/e8/35/ed/e835ed89023c2a6d2d1933321d59efc4.jpg"
+          alt="Nepali dumplings and momo"
+        />
+      </div>
+
+      <div class="hero-photo photo-b">
+        <img
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85"
+          alt="Warm modern restaurant interior"
+        />
+      </div>
+
+      <div class="stamp">
+        MADE<br />
+        IN<br />
+        NEPAL
+      </div>
+
+      <div class="scroll">
+        SCROLL
+        <span>↓</span>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <p class="eyebrow reveal">THE EMBER PHILOSOPHY</p>
+
+      <h2 class="reveal">
+        OLD<br />
+        <span>FLAVORS.</span><br />
+        NEW<br />
+        FIRE.
+      </h2>
+
+      <p class="manifesto-copy reveal">
+        We take the food we grew up with and give it room to change. Local
+        ingredients, techniques passed down, and a little fire, served without
+        the rules.
+      </p>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">FROM OUR KITCHEN</p>
+
+          <h2>
+            THE<br />
+            <span>MENU</span>
+          </h2>
+        </div>
+
+        <div class="filters">
+          <button class="filter active" data-filter="all">ALL</button>
+
+          <button class="filter" data-filter="small">SMALL PLATES</button>
+
+          <button class="filter" data-filter="mains">MAINS</button>
+
+          <button class="filter" data-filter="grill">FROM THE FIRE</button>
+
+          <button class="filter" data-filter="dessert">DESSERT</button>
+        </div>
+      </div>
+
+      <div class="food-grid">
+        <article class="food-card reveal" data-category="small">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/1200x/e8/35/ed/e835ed89023c2a6d2d1933321d59efc4.jpg"
+              alt="Steamed Nepali momo dumplings"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 01 </span>
+          </div>
+
+          <div class="food-info">
+            <span> SMALL PLATE </span>
+
+            <h3>EMBER MOMO</h3>
+
+            <p>Charred chicken momo, tomato achar and smoked sesame.</p>
+
+            <strong> NPR 520 </strong>
+          </div>
+        </article>
+
+        <article class="food-card reveal" data-category="small grill">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/1200x/5e/78/e3/5e78e3ee9c04aa69c64f3c1d76c7f99d.jpg"
+              alt="Charred grilled meat with herbs"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 02 </span>
+          </div>
+
+          <div class="food-info">
+            <span> FROM THE FIRE </span>
+
+            <h3>BUFF CHOILA</h3>
+
+            <p>
+              Open-fire grilled buffalo, timur, mustard oil and roasted tomato.
+            </p>
+
+            <strong> NPR 680 </strong>
+          </div>
+        </article>
+
+        <article class="food-card reveal" data-category="mains">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/1200x/f5/60/b7/f560b7d146c224ad9980a351cd88de7f.jpg"
+              alt="Hot noodle soup with vegetables"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 03 </span>
+          </div>
+
+          <div class="food-info">
+            <span> MAIN </span>
+
+            <h3>FIRE THUKPA</h3>
+
+            <p>
+              Himalayan noodle broth, roasted vegetables, chilli oil and herbs.
+            </p>
+
+            <strong> NPR 590 </strong>
+          </div>
+        </article>
+
+        <article class="food-card reveal" data-category="mains">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/1200x/ad/3c/3c/ad3c3c8a54ddb744a70be36d30ca645f.jpg"
+              alt="Traditional rice and curry meal"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 04 </span>
+          </div>
+
+          <div class="food-info">
+            <span> MAIN </span>
+
+            <h3>EMBER DAL BHAT</h3>
+
+            <p>
+              Black lentils, steamed rice, seasonal tarkari and fermented
+              greens.
+            </p>
+
+            <strong> NPR 750 </strong>
+          </div>
+        </article>
+
+        <article class="food-card reveal" data-category="grill">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/736x/f4/c4/3a/f4c43a2eba646a6b1189b993b093a562.jpg"
+              alt="Grilled pork ribs over open fire"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 05 </span>
+          </div>
+
+          <div class="food-info">
+            <span> FROM THE FIRE </span>
+
+            <h3>PORK SEKUWA</h3>
+
+            <p>Wood-fired pork skewers, juniper smoke and spicy Timur glaze.</p>
+
+            <strong> NPR 820 </strong>
+          </div>
+        </article>
+
+        <article class="food-card reveal" data-category="grill small">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/1200x/75/25/c2/7525c28b815e93b8f4ad4a3bb889090e.jpg"
+              alt="Grilled paneer with spices"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 06 </span>
+          </div>
+
+          <div class="food-info">
+            <span> SMALL PLATE </span>
+
+            <h3>FIRE PANEER</h3>
+
+            <p>
+              Grilled paneer, wild honey, chilli and toasted Himalayan spices.
+            </p>
+
+            <strong> NPR 590 </strong>
+          </div>
+        </article>
+
+        <article class="food-card reveal" data-category="mains">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/736x/c6/7d/7e/c67d7eacbb45be57793fc07a79b91771.jpg"
+              alt="Roasted chicken with herbs"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 07 </span>
+          </div>
+
+          <div class="food-info">
+            <span> MAIN </span>
+
+            <h3>KUKHURA TAREKO</h3>
+
+            <p>Crisp spiced chicken, roasted garlic, greens and house achar.</p>
+
+            <strong> NPR 790 </strong>
+          </div>
+        </article>
+
+        <article class="food-card reveal" data-category="dessert">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/1200x/15/6e/f2/156ef22c00ef87ec3be9f3e0901a5c00.jpg"
+              alt="Traditional sweet dessert"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 08 </span>
+          </div>
+
+          <div class="food-info">
+            <span> DESSERT </span>
+
+            <h3>YOMARI</h3>
+
+            <p>
+              Steamed rice-flour dumpling filled with jaggery, sesame and
+              coconut.
+            </p>
+
+            <strong> NPR 390 </strong>
+          </div>
+        </article>
+
+        <article class="food-card reveal" data-category="dessert">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/1200x/c5/43/fe/c543febbf4c3fc6e38f4abc4a1159f64.jpg"
+              alt="Crispy traditional ring shaped food"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 09 </span>
+          </div>
+
+          <div class="food-info">
+            <span> DESSERT </span>
+
+            <h3>SEL ROTI</h3>
+
+            <p>Crisp rice bread, cinnamon cream and cardamom caramel.</p>
+
+            <strong> NPR 250 </strong>
+          </div>
+        </article>
+
+        <article class="food-card reveal" data-category="small">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/1200x/9a/03/a0/9a03a05ed798889002df2665367ca4f8.jpg"
+              alt="Fresh seasonal vegetable salad"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 10 </span>
+          </div>
+
+          <div class="food-info">
+            <span> SMALL PLATE </span>
+
+            <h3>HIMALAYAN SALAD</h3>
+
+            <p>
+              Local greens, radish, roasted corn, herbs and sesame dressing.
+            </p>
+
+            <strong> NPR 420 </strong>
+          </div>
+        </article>
+
+        <article class="food-card reveal" data-category="grill mains">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/1200x/8a/d2/19/8ad21952a4313251f5317d567e7d3d99.jpg"
+              alt="Grilled fish with vegetables"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 11 </span>
+          </div>
+
+          <div class="food-info">
+            <span> FROM THE FIRE </span>
+
+            <h3>TIMUR FISH</h3>
+
+            <p>Fire-grilled river fish, Timur butter and charred lemon.</p>
+
+            <strong> NPR 890 </strong>
+          </div>
+        </article>
+
+        <article class="food-card reveal" data-category="dessert">
+          <div class="food-img">
+            <img
+              src="https://i.pinimg.com/1200x/d2/c9/91/d2c9913b187d9b2ed91993fe90173143.jpg"
+              alt="Chocolate cake dessert"
+              loading="lazy"
+            />
+
+            <span class="food-number"> 12 </span>
+          </div>
+
+          <div class="food-info">
+            <span> DESSERT </span>
+
+            <h3>COCOA MITHAI</h3>
+
+            <p>Dark chocolate cake, lapsi caramel and Himalayan salt.</p>
+
+            <strong> NPR 480 </strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="story-image reveal-image">
+        <img
+          src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=90"
+          alt="Fresh ingredients prepared for cooking"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="story-copy reveal">
+        <p class="eyebrow">OUR STORY</p>
+
+        <h2>
+          ROOTED<br />
+          IN<br />
+          NEPAL.
+        </h2>
+
+        <p>
+          EMBER began with a question we kept asking ourselves: could the food
+          we grew up eating look and feel completely different, without losing
+          what made it good?
+        </p>
+
+        <p>
+          From the spice markets of Asan to farms in the hills surrounding
+          Kathmandu, we work with local producers to bring Nepal's ingredients
+          into a modern kitchen.
+        </p>
+
+        <button class="button" data-booking>
+          COME VISIT US
+
+          <span>↗</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="quote">
+      <p class="eyebrow reveal">WHAT WE BELIEVE</p>
+
+      <h2 class="reveal">
+        GOOD FOOD<br />
+
+        NEEDS<br />
+
+        <span>GOOD FIRE.</span>
+      </h2>
+
+      <div class="quote-meta reveal">
+        <span> KATHMANDU </span>
+
+        <span> EST. 2026 </span>
+
+        <span> NEPAL </span>
+      </div>
+    </section>
+
+    <section class="reserve" id="reservation">
+      <div class="reserve-intro reveal">
+        <p class="eyebrow">YOUR TABLE AWAITS</p>
+
+        <h2>
+          BOOK<br />
+          <span>IT.</span>
+        </h2>
+
+        <p class="reserve-description">
+          Come hungry. Leave with a story. Reservations are recommended,
+          especially on Friday and Saturday evenings.
+        </p>
+
+        <div class="booking-details">
+          <div>
+            <span> OPEN </span>
+
+            <strong> 3 PM - 3 AM </strong>
+          </div>
+
+          <div>
+            <span> LOCATION </span>
+
+            <strong> Jhamsikhel, Lalitpur </strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-wrapper reveal">
+        <form class="booking-form" id="bookingForm">
+          <div class="form-top">
+            <span> RESERVE A TABLE </span>
+
+            <span> EMBER / KTM </span>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name"> NAME </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="phone"> PHONE </label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="98XXXXXXXX"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="date"> DATE </label>
+
+              <input type="date" id="date" name="date" required />
+            </div>
+
+            <div class="field">
+              <label for="time"> TIME </label>
+
+              <select id="time" name="time" required>
+                <option value="">Select time</option>
+
+                <option>3:00 PM</option>
+
+                <option>4:00 PM</option>
+
+                <option>5:00 PM</option>
+
+                <option>6:00 PM</option>
+
+                <option>7:00 PM</option>
+
+                <option>8:00 PM</option>
+
+                <option>9:00 PM</option>
+
+                <option>10:00 PM</option>
+
+                <option>11:00 PM</option>
+
+                <option>12:00 AM</option>
+
+                <option>1:00 AM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="guests"> GUESTS </label>
+
+            <select id="guests" name="guests" required>
+              <option value="">Number of guests</option>
+
+              <option>1 guest</option>
+
+              <option>2 guests</option>
+
+              <option>3 guests</option>
+
+              <option>4 guests</option>
+
+              <option>5 guests</option>
+
+              <option>6 guests</option>
+
+              <option>7+ guests</option>
+            </select>
+          </div>
+
+          <button type="submit" class="booking-submit">
+            <span> REQUEST RESERVATION </span>
+
+            <span class="submit-arrow"> ↗ </span>
+          </button>
+
+          <p class="form-note">
+            This is a demo booking form. No payment is required.
+          </p>
+        </form>
+
+        <div class="booking-success" id="bookingSuccess">
+          <div class="success-icon">✓</div>
+
+          <p class="eyebrow">RESERVATION RECEIVED</p>
+
+          <h3>
+            SEE<br />
+            <span>YOU SOON.</span>
+          </h3>
+
+          <p>
+            We've got your request. There'll be a table waiting for you at
+            EMBER.
+          </p>
+
+          <button class="button ghost" id="newBooking">
+            MAKE ANOTHER BOOKING
+
+            <span>↗</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div>
+        <a href="#home" class="logo">
+          EMBER
+          <span>KTM</span>
+        </a>
+
+        <p style="margin-top: 20px">
+          Modern Nepali kitchen.<br />
+          Jhamsikhel, Lalitpur, Nepal.
+        </p>
+      </div>
+
+      <div>
+        <p>HOURS</p>
+
+        <p style="margin-top: 10px">
+          Daily<br />
+          3:00 PM - 3:00 AM
+        </p>
+      </div>
+
+      <div>
+        <p>FOLLOW</p>
+
+        <p style="margin-top: 10px">
+          Instagram<br />
+          Facebook
+        </p>
+      </div>
+
+      <div>
+        <p>CONTACT</p>
+
+        <p style="margin-top: 10px">
+          +977 9800000000<br />
+          hello@emberkitchen.com
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
