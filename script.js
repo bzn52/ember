@@ -8,6 +8,31 @@ window.addEventListener("scroll", () => {
   }
 });
 
+const navAnchors = document.querySelectorAll(
+  '.desktop-nav a, .mobile-menu-inner a[href^="#"]',
+);
+const spySections = Array.from(navAnchors)
+  .map((a) => document.querySelector(a.getAttribute("href")))
+  .filter(Boolean);
+
+const setActiveNavLink = (id) => {
+  navAnchors.forEach((a) => {
+    a.classList.toggle("active", a.getAttribute("href") === "#" + id);
+  });
+};
+
+if (spySections.length) {
+  const navSpyObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActiveNavLink(entry.target.id);
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
+  );
+  spySections.forEach((section) => navSpyObserver.observe(section));
+}
+
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
