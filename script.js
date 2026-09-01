@@ -11,21 +11,32 @@ window.addEventListener("scroll", () => {
 const navAnchors = document.querySelectorAll(
   '.desktop-nav a, .mobile-menu-inner a[href^="#"]',
 );
-const spySections = Array.from(navAnchors)
-  .map((a) => document.querySelector(a.getAttribute("href")))
-  .filter(Boolean);
 
-const setActiveNavLink = (id) => {
+const sectionNavMap = {
+  home: "home",
+  menu: "menu",
+  story: "story",
+  reservation: "contact",
+  contact: "contact",
+};
+
+const setActiveNavLink = (targetId) => {
   navAnchors.forEach((a) => {
-    a.classList.toggle("active", a.getAttribute("href") === "#" + id);
+    a.classList.toggle("active", a.getAttribute("href") === "#" + targetId);
   });
 };
+
+const spySections = Object.keys(sectionNavMap)
+  .map((id) => document.getElementById(id))
+  .filter(Boolean);
 
 if (spySections.length) {
   const navSpyObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) setActiveNavLink(entry.target.id);
+        if (entry.isIntersecting) {
+          setActiveNavLink(sectionNavMap[entry.target.id]);
+        }
       });
     },
     { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
